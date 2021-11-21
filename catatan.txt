@@ -1,0 +1,15 @@
+D:\xampp\mysql_start;
+
+create TABLE if not EXISTS dbruri.mastercustomer(id INT(10) NOT NULL AUTO_INCREMENT,Customer_Name varchar(20) NOT NULL DEFAULT "",Fiscal_Address varchar(50) NOT NULL DEFAULT "",City varchar(20) NOT NULL DEFAULT "",Phone_Customer varchar(6) NOT NULL DEFAULT "",Postal_Code_Customer varchar(15) NOT NULL DEFAULT "",Fax_Customer varchar(15) NOT NULL DEFAULT "",NPWP_Customer varchar(20) NOT NULL DEFAULT "",NPPKP_Customer varchar(15) NOT NULL DEFAULT "",Delivery_Address varchar(50) NOT NULL DEFAULT "",City_Delivery varchar(20) NOT NULL DEFAULT "",Phone_Delivery varchar(15) NOT NULL DEFAULT "",Postal_Code_Delivery varchar(6) NOT NULL DEFAULT "",Fax_Delivery varchar(15) NOT NULL DEFAULT "",Contact_Person varchar(15) NOT NULL DEFAULT "",Title varchar(5) NOT NULL DEFAULT "",Phone_Extension varchar(5) NOT NULL DEFAULT "",Finance_Manager varchar(20) NOT NULL DEFAULT "",HP_Contact varchar(15) NOT NULL DEFAULT "",Email_Contact varchar(20) NOT NULL DEFAULT "",Acct_Payable_Contact varchar(20) NOT NULL DEFAULT "",HP_Acct varchar(20) NOT NULL DEFAULT "",Email_Acct varchar(20) NOT NULL DEFAULT "",Bank_Account_No varchar(20) NOT NULL DEFAULT "",Bank_Name_Branch varchar(30) NOT NULL DEFAULT "",Currency varchar(5) NOT NULL DEFAULT ""
+, PRIMARY KEY  (id));
+php artisan queue:restart
+php artisan cache:clear
+
+php artisan make:controller CustomerController --model=Customer --resource
+
+SHOW TABLES FROM dbruri;
+
+SHOW COLUMNS FROM dbruri.mastercustomer;
+ALTER TABLE dbruri.mastercustomer add hapus int(1) DEFAULT 0;
+
+git status
