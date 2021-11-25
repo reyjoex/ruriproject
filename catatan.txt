@@ -13,3 +13,5 @@ SHOW COLUMNS FROM dbruri.mastercustomer;
 ALTER TABLE dbruri.mastercustomer add hapus int(1) DEFAULT 0;
 
 git status
+git add -A
+git commit -m "commit message"
