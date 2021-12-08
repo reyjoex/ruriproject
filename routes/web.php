@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\VendorController;
+use App\Http\Controllers\QuotationController;
 
 
 Route::resource('/', HomeController::class)->only([
@@ -27,3 +28,9 @@ Route::get('editvendor/{id}',[VendorController::class,'edit']);
 Route::post('storevendor',[VendorController::class,'store']);
 Route::post('updatevendor',[VendorController::class,'update']);
 Route::get('destroyvendor/{id}',[VendorController::class,'destroy']);
+
+Route::get('quotation',[QuotationController::class,'index'])->name('quotation');
+Route::get('detailquotation/{id}',[QuotationController::class,'detailquotation']);
+Route::get('bataldrafquot/{id}',[QuotationController::class,'bataldrafquot']);
+Route::get('addquotation',[QuotationController::class,'create'])->name('addquotation');
+Route::post('storequotation',[QuotationController::class,'store']);

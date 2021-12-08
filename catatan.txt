@@ -7,11 +7,21 @@ php artisan cache:clear
 
 php artisan make:controller CustomerController --model=Customer --resource
 
+php artisan make:model QuotationModel
+
+'strict' => false, -> di folder config and file database.php baris mysql
+
 SHOW TABLES FROM dbruri;
 
 SHOW COLUMNS FROM dbruri.mastercustomer;
 ALTER TABLE dbruri.mastercustomer add hapus int(1) DEFAULT 0;
 
 git status
-git add -A
-git commit -m "commit message"
+
+1. git add namafile -> perintah menambah git
+2. git commit -m "comment" -> perintah commit yg sudah di add
+3. git push https://github.com/reyjoex/ruriproject.git -> perintah ke github
+4. # pindah dulu ke branch master (lokal)
+   git checkout master
+5. # merge branch
+   git merge master origin/master

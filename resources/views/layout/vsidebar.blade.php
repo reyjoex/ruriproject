@@ -34,7 +34,7 @@
                     @if (substr($datasub->orderby,0,1) == $data->orderby)
                       <ul class="nav nav-treeview">
                         <li class="nav-item">
-                          <a href="{{ $datasub->nmfile }}" class="nav-link">
+                          <a href="/{{ $datasub->nmfile }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>{{$datasub->nama}}</p>
                           </a>
